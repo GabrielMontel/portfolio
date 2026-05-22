@@ -57,7 +57,7 @@ const ALL_PROJECTS_DATA: Record<string, {
     context: "Création Graphique / Sport",
     role: "Designer Graphique",
     details: "Conception d'une affiche type poster destiné à des joueurs de football professionnel. Travail approfondi sur le traitement de l'image, le découpage des calques, la colorimétrie dynamique (grading), et l'intégration d'effets de lumière texturés.",
-    images: ["/public/affiche_1.png", "/public/affiche_2.jpg", "/public/affiche_3.png", "/public/affiche_4.png", "/public/affiche_5.jpg", "/public/affiche_6.jpg"],
+    images: ["/affiche_1.png", "/affiche_2.jpg", "/affiche_3.png", "/affiche_4.png", "/affiche_5.jpg", "/affiche_6.jpg"],
     skillsUsed: ["Photoshop", "Retouche photo", "Colorimétrie", "Composition"],
     skillsAcquired: ["Branding visuel", "Maîtrise des calques", "Effets premium"],
     outcome: "Affiche graphique prête à l'impression et à la communication digitale sur les reseaux sociaux."
