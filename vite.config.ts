@@ -1,8 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import sitemap from 'vite-plugin-sitemap'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    sitemap({
+      // Remplace bien par TON URL personnalisée Vercel
+      hostname: 'https://gabriel-montel.vercel.app/',
+    }),
+  ],
 })
