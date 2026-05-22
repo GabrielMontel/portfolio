@@ -9,14 +9,14 @@ export default function Projects() {
 
   const webProjects = [
     { slug: "Site vitrine", num: "01", title: "Refonte site vitrine entreprise H-A-VALEUR", tech: "PHP / HTML / CSS", desc: "Projet de refonte complète du site vitrine de l'entreprise H-A-VALEUR." },
-    { slug: "3d-configurator", num: "02", title: "3D Vehicle Configurator", tech: "Three.js / Vite / Tailwind", desc: "Application interactive permettant de configurer un véhicule de luxe en temps réel avec gestion des textures." },
-    { slug: "secure-api", num: "03", title: "Secure Studio API", tech: "TypeScript / Express / Docker", desc: "Mise en situation pro : Création d'une API REST avec chiffrement, validation de données et déploiement conteneurisé." },
+    { slug: "3d-configurator", num: "02", title: "prochainement...", tech: "...", desc: ";;;;;;;;" },
+    { slug: "secure-api", num: "03", title: "prochainement...", tech: "...", desc: ";;;;;;;;" },
   ];
 
   const graphicProjects = [
     { slug: "poster", num: "01", title: "Poster graphique", tech: "Photoshop", desc: "Création d'affiche type poster destiné à un joueur de football professionnel." },
-    { slug: "motion-vfx", num: "02", title: "KINETIC Motion Poster", tech: "After Effects", desc: "Animation de logotype et intégration vidéo au sein de compositions 3D complexes." },
-    { slug: "luxury-ui", num: "03", title: "Luxury Real Estate UI", tech: "Figma / Component System", desc: "Design d'interface haute fidélité axé sur le minimalisme, l'ergonomie et la hiérarchie visuelle premium." },
+    { slug: "motion-vfx", num: "02", title: "prochainement...", tech: "....", desc: "...." },
+    { slug: "luxury-ui", num: "03", title: "prochainement...", tech: "....", desc: "...." },
   ];
 
   const currentProjects = activeTab === "web" ? webProjects : graphicProjects;
