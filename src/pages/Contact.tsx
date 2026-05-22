@@ -6,8 +6,8 @@ export default function Contact() {
       {/* Colonne infos */}
       <div className="md:col-span-4 panel-border p-8 flex flex-col justify-between">
         <div className="space-y-6">
-          <span className="tech-label text-white/40">Terminal Connexion</span>
-          <h2 className="text-3xl font-black uppercase tracking-tighter">Let's build <br /> together.</h2>
+          <span className="tech-label text-white/40">me contacter</span>
+          <h2 className="text-3xl font-black uppercase tracking-tighter">Rencontrons <br /> noous.</h2>
         </div>
         
         <div className="space-y-4 text-xs font-bold uppercase tracking-widest text-neutral-400">
