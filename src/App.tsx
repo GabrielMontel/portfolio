@@ -25,7 +25,7 @@ function Home() {
           playsInline 
           className="absolute inset-0 w-full h-full object-cover grayscale brightness-[0.3] group-hover:scale-105 transition-transform duration-[3s]"
         >
-          <source src="/public/earth.mp4" type="video/mp4" />
+          <source src="/earth.mp4" type="video/mp4" />
           {/* Fallback image au cas où la vidéo met du temps à charger */}
           <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=2070" alt="Espace" />
         </video>
