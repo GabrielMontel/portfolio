@@ -18,7 +18,7 @@ export default function Contact() {
             <Phone size={14} /> +33 7 84 69 40 95
           </div>
           <a href="/CV.pdf" download className="flex items-center gap-3 hover:text-white transition text-blue-400 cursor-pointer">
-            <FileText size={14} /> Télécharger mon CV (PDF)
+            <FileText size={14} /> Mon Linkedin
           </a>
         </div>
       </div>
