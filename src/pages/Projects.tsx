@@ -22,7 +22,7 @@ export default function Projects() {
       title: "Site prototype film Dune 2", 
       tech: "HTML / CSS / JavaScript", 
       desc: "Création d'un site prototype pour le film Dune 2 avec API Leaflet et AJAX.",
-      img: "/site-dune.jpg"
+      img: "/site-dune.png"
     },
     { 
       slug: "secure-api", 
