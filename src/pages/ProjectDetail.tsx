@@ -27,16 +27,16 @@ const ALL_PROJECTS_DATA: Record<string, {
     outcome: "Site vitrine fonctionnelle avec design moderne et administration backend robuste.",
     website: "https://h-a-valeur.fr"
   },
-  "3d-configurator": {
-    title: "3D Vehicle Configurator",
-    tech: "Three.js / Vite / Tailwind",
-    context: "Projet personnel de R&D",
-    role: "Creative Developer / Intégrateur 3D",
-    details: "Développement d'un canvas WebGL immersif chargeant des fichiers 3D au format GLTF. Optimisation poussée du rendu des ombres et des textures en temps réel pour assurer un taux de rafraîchissement constant de 60fps sur navigateurs desktop et mobiles.",
-    images: ["/project-images/3d-configurator-1.jpg", "/project-images/3d-configurator-2.jpg"],
-    skillsUsed: ["Three.js", "WebGL", "JavaScript", "Tailwind", "Performance"],
+  "Site prototype film Dune 2": {
+    title: "Site prototype film Dune 2",
+    tech: "HTML / CSS / JavaScript",
+    context: "Projet scolaire MMI — Semestre 3",
+    details: "Création d'un site prototype pour le film Dune 2. Le projet a consisté à développer une interface immersive avec des animations fluides, intégrant des éléments interactifs pour présenter les personnages et l'univers du film.",
+    images: ["/site-dune.jpg", "/site-dune-2.jpg"],
+    role: "Développeur Front-End",
+    skillsUsed: ["HTML", "CSS", "JavaScript"],
     skillsAcquired: ["Rendu 3D temps réel", "Gestion de scènes 3D", "Optimisation de performances", "UI 3D responsive"],
-    outcome: "Prototype interactif complet permettant la personnalisation d'un véhicule en temps réel avec rendu fluide et interface engageante."
+    outcome: "Prototype de site web immersif avec animations 3D, prêt à être présenté comme concept de design pour une campagne marketing digitale."
   },
   "secure-api": {
     title: "Secure Studio API",

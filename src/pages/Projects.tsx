@@ -9,7 +9,7 @@ export default function Projects() {
 
   const webProjects = [
     { slug: "Site vitrine", num: "01", title: "Refonte site vitrine entreprise H-A-VALEUR", tech: "PHP / HTML / CSS", desc: "Projet de refonte complète du site vitrine de l'entreprise H-A-VALEUR." },
-    { slug: "3d-configurator", num: "02", title: "prochainement...", tech: "...", desc: ";;;;;;;;" },
+    { slug: "Site prototype film Dune 2", num: "02", title: "Site prototype film Dune 2", tech: "HTML / CSS / JavaScript", desc: "Création d'un site prototype pour le film Dune 2." },
     { slug: "secure-api", num: "03", title: "prochainement...", tech: "...", desc: ";;;;;;;;" },
   ];
 
