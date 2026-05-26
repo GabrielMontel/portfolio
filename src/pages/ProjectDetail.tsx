@@ -21,7 +21,7 @@ const ALL_PROJECTS_DATA: Record<string, {
     context: "STAGE entreprise — Semestre 3",
     role: "Développeur Fullstack",
     details: "Conception d'une architecture MVC complète. Refonte complete du design du site. Integration d'une liste de stock de composant de l'entreprise.",
-    images: ["/project-images/ecommerce-1.jpg", "/project-images/ecommerce-2.jpg"],
+    images: ["/hav-1.png", "/hav-2.png", "/hav-3.png"],
     skillsUsed: ["PHP", "HTML", "CSS"],
     skillsAcquired: ["Architecture MVC", "Sécurité backend", "Stratégie de design", "Gestion de base de données"],
     outcome: "Site vitrine fonctionnelle avec design moderne et administration backend robuste.",

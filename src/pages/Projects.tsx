@@ -14,7 +14,7 @@ export default function Projects() {
       title: "Refonte site vitrine entreprise H-A-VALEUR", 
       tech: "PHP / HTML / CSS", 
       desc: "Projet de refonte complète du site vitrine de l'entreprise H-A-VALEUR.",
-      img: "/ha-valeur.jpg" // Place ton image dans le dossier public
+      img: "/hav-1.png" // Place ton image dans le dossier public
     },
     { 
       slug: "site-dune-2", // Corrigé pour correspondre à ton composant de détails
