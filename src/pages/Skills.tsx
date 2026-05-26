@@ -11,17 +11,17 @@ export default function Skills() {
     { 
       name: "Dev Front-End", 
       icon: <Monitor size={14} className="text-neutral-400" />,
-      skills: [ { n: "React / TypeScript", p: 85 }, { n: "Tailwind CSS v4", p: 90 } ] 
+      skills: [ { n: "HTML / CSS", p: 85 }, { n: "JavaScript", p: 90 },{ n: "React.js", p: 90 } ] 
     },
     { 
       name: "Dev Back-End", 
       icon: <Server size={14} className="text-neutral-400" />,
-      skills: [ { n: "Node.js / Express", p: 75 }, { n: "SQL / PostgreSQL", p: 70 } ] 
+      skills: [ { n: "SQL", p: 75 }, { n: "Node.js", p: 70 } ] 
     },
     { 
       name: "Design Graphique", 
       icon: <Palette size={14} className="text-neutral-400" />,
-      skills: [ { n: "Photoshop (Compositing)", p: 90 }, { n: "After Effects (Motion)", p: 75 } ] 
+      skills: [ { n: "Photoshop (Compositing)", p: 90 }, { n: "After Effects (Motion)", p: 75 }, { n: "Premiere Pro (Montage)", p: 60 } ] 
     }
   ];
 
