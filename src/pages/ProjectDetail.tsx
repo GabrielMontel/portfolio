@@ -15,7 +15,7 @@ const ALL_PROJECTS_DATA: Record<string, {
   website?: string;
 }> = {
   // --- ONGLETS CODE & WEB DESIGN ---
-  "Site vitrine": {
+  "site-vitrine": {
     title: "Refonte site vitrine H-A-VALEUR",
     tech: "PHP / HTML / CSS",
     context: "STAGE entreprise — Semestre 3",
@@ -27,7 +27,7 @@ const ALL_PROJECTS_DATA: Record<string, {
     outcome: "Site vitrine fonctionnelle avec design moderne et administration backend robuste.",
     website: "https://h-a-valeur.fr"
   },
-  "Site prototype film Dune 2": {
+  "site-dune-2": {
     title: "Site prototype film Dune 2",
     tech: "HTML / CSS / JavaScript",
     context: "Projet scolaire MMI — Semestre 3",
