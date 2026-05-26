@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Cpu, Layers, Monitor, Server, Palette } from "lucide-react";
+import { Layers, Monitor, Server, Palette } from "lucide-react";
 
 export default function Skills() {
   const categories = [
