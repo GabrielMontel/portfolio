@@ -33,7 +33,7 @@ const ALL_PROJECTS_DATA: Record<string, {
     context: "Projet scolaire MMI — Semestre 3",
     role: "Développeur Front-End",
     details: "Conception d'un site immersif pour la campagne promotionnelle du film Dune 2. Intégration d'un flux vidéo externe (YouTube/Dailymotion), structure asymétrique complexe en CSS Grid, développement de carrousels interactifs (manuels et automatisés), intégration de l'API de cartographie Leaflet pour la géolocalisation des cinémas, et génération dynamique d'un casting interactif via des requêtes asynchrones AJAX.",
-    images: ["/site-dune.jpg", "/site-dune-2.jpg"],
+    images: ["/site-dune.png", "/site-dune-2.png"],
     skillsUsed: ["HTML5", "CSS3 / Grid", "JavaScript (Vanilla)", "Leaflet API", "AJAX"],
     skillsAcquired: [
       "Manipulation dynamique du DOM",
