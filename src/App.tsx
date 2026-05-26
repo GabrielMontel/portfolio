@@ -1,10 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Zap, MoveRight, MousePointer2 } from "lucide-react";
-// 1. AJOUTE CET IMPORT EN HAUT AVEC LES AUTRES PAGES :
-import ProjectDetail from "./pages/ProjectDetail";
 
 // Import de tes pages
+import ProjectDetail from "./pages/ProjectDetail";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Space from "./pages/Space";
@@ -15,7 +14,7 @@ function Home() {
   return (
     <>
       {/* VISUEL PRINCIPAL - ESPACE & TERRE */}
-      <section className="md:col-span-8 md:row-span-4 panel-border p-8 md:p-12 relative overflow-hidden group min-h-[50vh] md:min-h-0 flex flex-col justify-end">
+      <section className="md:col-span-8 md:row-span-4 panel-border p-6 md:p-12 relative overflow-hidden group min-h-[40vh] md:min-h-0 flex flex-col justify-end">
         
         {/* REPRODUCTION VIDÉO DE LA TERRE */}
         <video 
@@ -26,19 +25,18 @@ function Home() {
           className="absolute inset-0 w-full h-full object-cover grayscale brightness-[0.3] group-hover:scale-105 transition-transform duration-[3s]"
         >
           <source src="/earth.mp4" type="video/mp4" />
-          {/* Fallback image au cas où la vidéo met du temps à charger */}
           <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=2070" alt="Espace" />
         </video>
 
         {/* GRADIENT PLUS DISCRET POUR LAISSER APPARAÎTRE LA TERRE */}
-<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-10 pointer-events-none" />
         
         {/* TEXTE UNIQUE ET NAVIGATION */}
         <div className="relative z-20">
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-6"
+            className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-6 text-white"
           >
             Gabriel <br /> Montel.
           </motion.h2>
@@ -49,18 +47,18 @@ function Home() {
       </section>
 
       {/* SIDEBAR TECHNIQUE */}
-      <aside className="md:col-span-4 md:row-span-4 panel-border p-8 md:p-10 flex flex-col justify-between gap-8">
-        <div className="space-y-8">
+      <aside className="md:col-span-4 md:row-span-4 panel-border p-6 md:p-10 flex flex-col justify-between gap-6 md:gap-8">
+        <div className="space-y-6 md:space-y-8">
           <div>
             <span className="tech-label text-white/40">Description</span>
-            <p className="text-sm mt-3 text-neutral-400 leading-relaxed uppercase tracking-wider font-medium">
+            <p className="text-xs md:text-sm mt-3 text-neutral-400 leading-relaxed uppercase tracking-wider font-medium">
               Etudiant en deuxieme année BUT Métiers du Multimedia et de l'Internet 
             </p>
           </div>
           <div className="h-px bg-white/10 w-full" />
           <div>
             <span className="tech-label">Competences Principales</span>
-            <ul className="text-[10px] mt-4 space-y-2 uppercase font-bold tracking-widest text-neutral-500">
+            <ul className="text-[9px] md:text-[10px] mt-4 space-y-2 uppercase font-bold tracking-widest text-neutral-500">
               <li>- Developpement web</li>
               <li>- Design Graphique</li>
               <li>- Communication</li>
@@ -68,9 +66,9 @@ function Home() {
           </div>
         </div>
         
-        <Link to="/contact" className="p-6 bg-white/5 border border-white/10 rounded flex items-center justify-between group cursor-pointer hover:bg-white/10 transition">
+        <Link to="/contact" className="p-4 md:p-6 bg-white/5 border border-white/10 rounded flex items-center justify-between group cursor-pointer hover:bg-white/10 transition">
           <span className="tech-label text-white">Me Contacter</span>
-          <MousePointer2 size={16} className="group-hover:rotate-12 transition" />
+          <MousePointer2 size={16} className="group-hover:rotate-12 transition text-white" />
         </Link>
       </aside>
     </>
@@ -81,10 +79,11 @@ function Home() {
 export default function App() {
   return (
     <Router>
-      <main className="min-h-screen w-full p-4 md:p-6 grid grid-cols-1 md:grid-cols-12 md:grid-rows-6 gap-4 box-border bg-[#050505]">
+      {/* Passage en flex-direction colonne sur mobile et grille uniquement sur écran d'ordinateur (md+) */}
+      <main className="min-h-screen w-full p-4 md:p-6 flex flex-col md:grid md:grid-cols-12 md:grid-rows-6 gap-4 box-border bg-[#050505]">
         
         {/* HEADER & NAV */}
-        <header className="md:col-span-12 panel-border p-6 flex justify-between items-center h-20">
+        <header className="panel-border p-4 md:p-6 flex flex-col sm:flex-row justify-between items-center gap-4 h-auto md:h-20 md:col-span-12">
           <Link to="/" className="flex items-center gap-4 group">
             <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center group-hover:rotate-12 transition">
               <Zap size={16} className="text-black fill-black" />
@@ -92,62 +91,63 @@ export default function App() {
             <h1 className="text-base font-black uppercase tracking-tighter text-white">Gabriel Montel / Portfolio</h1>
           </Link>
           
-          <div className="flex items-center gap-6 md:gap-10">
-            <nav className="flex gap-4 md:gap-8 tech-label">
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-10">
+            <nav className="flex gap-4 md:gap-8 tech-label text-xs md:text-sm text-neutral-400">
               <Link to="/projets" className="hover:text-white transition">Projects</Link>
               <Link to="/competences" className="hover:text-white transition">Skills</Link>
               <Link to="/space" className="hover:text-white transition">About</Link>
               <Link to="/contact" className="hover:text-white transition">Contact</Link>
             </nav>
 
-            {/* BOUTON CV UNIQUE ET VISIBLE */}
+            {/* BOUTON CV UNIQUE EN HAUT (Masqué sur tout petit écran, visible via le footer) */}
             <a 
-              href="./CV.pdf" // Mets ton fichier PDF dans le dossier "public" de ton projet
+              href="./CV.pdf"
               download
               className="hidden sm:flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] bg-white text-black px-4 py-2 rounded-sm border border-white hover:bg-transparent hover:text-white transition-all duration-300 cursor-pointer"
             >
               <span>CV.PDF</span>
-              <span className="opacity-60 group-hover:translate-y-0.5 transition-transform">↓</span>
+              <span className="opacity-60">↓</span>
             </a>
           </div>
         </header>
 
-        
+        {/* ZONE DE CONTENU DYNAMIQUE */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projets" element={<Projects />} />
+          <Route path="/projets/:projectSlug" element={<ProjectDetail />} />
+          <Route path="/competences" element={<Skills />} />
+          <Route path="/space" element={<Space />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
 
-
-<Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/projets" element={<Projects />} />
-  <Route path="/projets/:projectSlug" element={<ProjectDetail />} /> {/* <--- NOUVELLE ROUTE DYNAMIQUE */}
-  <Route path="/competences" element={<Skills />} />
-  <Route path="/space" element={<Space />} />
-  <Route path="/contact" element={<Contact />} />
-</Routes>
-
-        {/* FOOTER METRICS */}
-        <footer className="md:col-span-12 panel-border p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-center h-auto md:h-20">
-          <div className="flex flex-col gap-1 border-l border-white/10 pl-6">
+        {/* FOOTER METRICS RESPONSIVE */}
+        <footer className="panel-border p-4 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 items-center h-auto md:h-20 md:col-span-12">
+          <div className="flex flex-col gap-1 border-l border-white/10 pl-4 md:pl-6">
             <span className="tech-label text-[8px] opacity-40">Environment</span>
-            <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400">Production Mode</span>
+            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-blue-400">Production Mode</span>
           </div>
-          <div className="flex flex-col gap-1 border-l border-white/10 pl-6">
+          <div className="flex flex-col gap-1 border-l border-white/10 pl-4 md:pl-6">
             <span className="tech-label text-[8px] opacity-40">Localisation</span>
-            <span className="text-[10px] font-bold uppercase tracking-widest">Dijon, FR</span>
+            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-white">Dijon, FR</span>
           </div>
-          <div className="flex flex-col gap-1 border-l border-white/10 pl-6">
+          <div className="flex flex-col gap-1 border-l border-white/10 pl-4 md:pl-6">
             <span className="tech-label text-[8px] opacity-40">Disponibilité</span>
-            <span className="text-[10px] font-bold uppercase tracking-widest text-green-400 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> En recherche d'alternance
+            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-green-400 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> Alternance
             </span>
           </div>
-          <a 
-              href="./CV.pdf" // Mets ton fichier PDF dans le dossier "public" de ton projet
+          {/* Le bouton de téléchargement prend une place complète sur mobile pour rester accessible */}
+          <div className="col-span-2 md:col-span-1 flex md:justify-end">
+            <a 
+              href="./CV.pdf"
               download
-              className="hidden sm:flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] bg-white text-black px-4 py-2 rounded-sm border border-white hover:bg-transparent hover:text-white transition-all duration-300 cursor-pointer"
+              className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] bg-white text-black px-4 py-2.5 rounded-sm border border-white hover:bg-transparent hover:text-white transition-all duration-300 cursor-pointer w-full md:w-auto"
             >
-              <span>CV.PDF</span>
-              <span className="opacity-60 group-hover:translate-y-0.5 transition-transform">↓</span>
+              <span>TELECHARGER CV</span>
+              <span>↓</span>
             </a>
+          </div>
         </footer>
 
       </main>
