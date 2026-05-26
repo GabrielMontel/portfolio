@@ -1,20 +1,38 @@
 import { motion } from "framer-motion";
-import { Cpu } from "lucide-react";
+import { Cpu, Layers, Monitor, Server, Palette } from "lucide-react";
 
 export default function Skills() {
   const categories = [
-    { name: "Frontend Development", skills: [ { n: "React / TypeScript", p: 85 }, { n: "Tailwind CSS v4", p: 90 }, { n: "Next.js", p: 60 } ] },
-    { name: "Backend & Infra", skills: [ { n: "Node.js / Express", p: 75 }, { n: "SQL / PostgreSQL", p: 70 }, { n: "Docker / Git", p: 65 } ] }
+    { 
+      name: "Web Design & UX", 
+      icon: <Layers size={14} className="text-neutral-400" />,
+      skills: [ { n: "Figma (Design System)", p: 90 }, { n: "Prototypage UI", p: 85 } ] 
+    },
+    { 
+      name: "Dev Front-End", 
+      icon: <Monitor size={14} className="text-neutral-400" />,
+      skills: [ { n: "React / TypeScript", p: 85 }, { n: "Tailwind CSS v4", p: 90 } ] 
+    },
+    { 
+      name: "Dev Back-End", 
+      icon: <Server size={14} className="text-neutral-400" />,
+      skills: [ { n: "Node.js / Express", p: 75 }, { n: "SQL / PostgreSQL", p: 70 } ] 
+    },
+    { 
+      name: "Design Graphique", 
+      icon: <Palette size={14} className="text-neutral-400" />,
+      skills: [ { n: "Photoshop (Compositing)", p: 90 }, { n: "After Effects (Motion)", p: 75 } ] 
+    }
   ];
 
   return (
-    <div className="md:col-span-12 md:row-span-4 grid grid-cols-1 md:grid-cols-2 gap-4 h-full">
+    <div className="md:col-span-12 md:row-span-4 grid grid-cols-1 md:grid-cols-2 gap-4 h-full overflow-y-auto pr-2 custom-scrollbar pb-4">
       {categories.map((cat, idx) => (
-        <div key={idx} className="panel-border p-8 flex flex-col justify-between">
+        <div key={idx} className="panel-border p-8 flex flex-col justify-between group hover:border-white/20 transition-colors bg-white/[0.01]">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <Cpu size={14} className="text-neutral-400" />
-              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400">{cat.name}</h3>
+              {cat.icon}
+              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400 group-hover:text-blue-400 transition-colors">{cat.name}</h3>
             </div>
             
             <div className="space-y-6">
@@ -37,7 +55,7 @@ export default function Skills() {
               ))}
             </div>
           </div>
-          <span className="text-[9px] font-mono text-neutral-600 mt-6">// Auto-évaluation basée sur les projets académiques</span>
+          <span className="text-[9px] font-mono text-neutral-600 mt-6">// Auto-évaluation basée sur les compétences MMI</span>
         </div>
       ))}
     </div>
