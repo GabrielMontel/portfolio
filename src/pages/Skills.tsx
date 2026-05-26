@@ -6,7 +6,7 @@ export default function Skills() {
     { 
       name: "Web Design & UX", 
       icon: <Layers size={14} className="text-neutral-400" />,
-      skills: [ { n: "Figma (Design System)", p: 60 }, { n: "Prototypage UI", p: 80 } ] 
+      skills: [ { n: "Figma (Design System)", p: 60 }, { n: "Prototypage UI", p: 80 }, { n: "Wordpress", p: 85 } ] 
     },
     { 
       name: "Dev Front-End", 
