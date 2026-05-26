@@ -31,12 +31,17 @@ const ALL_PROJECTS_DATA: Record<string, {
     title: "Site prototype film Dune 2",
     tech: "HTML / CSS / JavaScript",
     context: "Projet scolaire MMI — Semestre 3",
-    details: "Création d'un site prototype pour le film Dune 2. Le projet a consisté à développer une interface immersive avec des animations fluides, intégrant des éléments interactifs pour présenter les personnages et l'univers du film.",
-    images: ["/site-dune.jpg", "/site-dune-2.jpg"],
     role: "Développeur Front-End",
-    skillsUsed: ["HTML", "CSS", "JavaScript"],
-    skillsAcquired: ["Rendu 3D temps réel", "Gestion de scènes 3D", "Optimisation de performances", "UI 3D responsive"],
-    outcome: "Prototype de site web immersif avec animations 3D, prêt à être présenté comme concept de design pour une campagne marketing digitale."
+    details: "Conception d'un site immersif pour la campagne promotionnelle du film Dune 2. Intégration d'un flux vidéo externe (YouTube/Dailymotion), structure asymétrique complexe en CSS Grid, développement de carrousels interactifs (manuels et automatisés), intégration de l'API de cartographie Leaflet pour la géolocalisation des cinémas, et génération dynamique d'un casting interactif via des requêtes asynchrones AJAX.",
+    images: ["/site-dune.jpg", "/site-dune-2.jpg"],
+    skillsUsed: ["HTML5", "CSS3 / Grid", "JavaScript (Vanilla)", "Leaflet API", "AJAX"],
+    skillsAcquired: [
+      "Manipulation dynamique du DOM",
+      "Intégration et manipulation d'API tierces (Cartographie)",
+      "Gestion des requêtes asynchrones (Fetch / AJAX)",
+      "Conception d'interfaces interactives (Carrousels)"
+    ],
+    outcome: "Un prototype de plateforme multimédia fluide et responsive, combinant interactivité asynchrone et données géographiques, parfaitement adapté pour une campagne de marketing digital événementiel."
   },
   "secure-api": {
     title: "Secure Studio API",
