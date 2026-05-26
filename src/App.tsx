@@ -124,8 +124,8 @@ export default function App() {
         {/* FOOTER METRICS RESPONSIVE */}
         <footer className="panel-border p-4 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 items-center h-auto md:h-20 md:col-span-12">
           <div className="flex flex-col gap-1 border-l border-white/10 pl-4 md:pl-6">
-            <span className="tech-label text-[8px] opacity-40">Environment</span>
-            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-blue-400">Production Mode</span>
+            <span className="tech-label text-[8px] opacity-40">Environnement</span>
+            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-blue-400">IUT Dijon</span>
           </div>
           <div className="flex flex-col gap-1 border-l border-white/10 pl-4 md:pl-6">
             <span className="tech-label text-[8px] opacity-40">Localisation</span>
@@ -134,7 +134,7 @@ export default function App() {
           <div className="flex flex-col gap-1 border-l border-white/10 pl-4 md:pl-6">
             <span className="tech-label text-[8px] opacity-40">Disponibilité</span>
             <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-green-400 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> Alternance
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> En recherche d'alternance 
             </span>
           </div>
           {/* Le bouton de téléchargement prend une place complète sur mobile pour rester accessible */}
