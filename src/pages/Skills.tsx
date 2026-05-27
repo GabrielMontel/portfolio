@@ -11,7 +11,7 @@ export default function Skills() {
     { 
       name: "Dev Front-End", 
       icon: <Monitor size={14} className="text-neutral-400" />,
-      skills: [ { n: "HTML / CSS", p: 90 }, { n: "JavaScript", p: 40 }, { n: "React.js", p: 40 }, { n: "three.js", p: 40 }, { n: "tailwind.css", p: 40 } ] 
+      skills: [ { n: "HTML / CSS", p: 90 }, { n: "JavaScript", p: 40 }, { n: "React.js", p: 55 }, { n: "three.js", p: 40 }, { n: "tailwind.css", p: 60 } ] 
     },
     { 
       name: "Dev Back-End", 
