@@ -57,3 +57,14 @@ body::after {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
 }
+
+::selection {
+  background-color: #ffffff; /* Fond blanc */
+  color: #000000;            /* Texte noir pour qu'il reste lisible */
+}
+
+/* Pour Firefox */
+::-moz-selection {
+  background-color: #ffffff;
+  color: #000000;
+}
