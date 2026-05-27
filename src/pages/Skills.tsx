@@ -6,17 +6,17 @@ export default function Skills() {
     { 
       name: "Web Design & UX", 
       icon: <Layers size={14} className="text-neutral-400" />,
-      skills: [ { n: "Figma (Design System)", p: 60 }, { n: "Prototypage UI", p: 80 }, { n: "Wordpress", p: 85 } ] 
+      skills: [ { n: "Figma", p: 60 }, { n: "Prototypage UI", p: 80 }, { n: "Wordpress", p: 85 } ] 
     },
     { 
       name: "Dev Front-End", 
       icon: <Monitor size={14} className="text-neutral-400" />,
-      skills: [ { n: "HTML / CSS", p: 90 }, { n: "JavaScript", p: 40 }, { n: "React.js", p: 40 }, { n: "PHP", p: 60 }, { n: "three.js", p: 40 }, { n: "tailwind.css", p: 40 } ] 
+      skills: [ { n: "HTML / CSS", p: 90 }, { n: "JavaScript", p: 40 }, { n: "React.js", p: 40 }, { n: "three.js", p: 40 }, { n: "tailwind.css", p: 40 } ] 
     },
     { 
       name: "Dev Back-End", 
       icon: <Server size={14} className="text-neutral-400" />,
-      skills: [ { n: "SQL", p: 65 }, { n: "Node.js", p: 70 } ] 
+      skills: [ { n: "SQL", p: 65 }, { n: "PHP", p: 55 } ] 
     },
     { 
       name: "Design Graphique", 
