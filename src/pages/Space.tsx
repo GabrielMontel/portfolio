@@ -18,10 +18,12 @@ export default function Space() {
           {/* Grosse colonne de texte principal */}
           <div className="md:col-span-2 space-y-4 text-sm text-neutral-400 uppercase tracking-wide leading-relaxed font-medium">
             <p>
-              Actuellement en deuxième année de BUT MMI (Métiers du Multimédia et de l'Internet), j'ai centré mon profil sur l'ingénierie front-end et l'architecture back-end. Je ne me contente pas d'intégrer des maquettes ; je conçois des systèmes scalables, fluides et optimisés.
+Actuellement en deuxième année de BUT MMI (Métiers du Multimédia et de l'Internet), j'ai centré mon profil sur l'ingénierie front-end et la conception d'interfaces. Poussé par un fort tempérament créatif, je ne me contente pas de simplement reproduire des maquettes : j'imagine et je déploie des expériences web immersives, fluides et esthétiquement rigoureuses.
+
+Mon approche est dictée par l'alliance parfaite entre performance brute et esthétique minimaliste. Passionné par les architectures modernes comme React et Vite, je mets un point d'honneur à ce que l'élégance visuelle d'un site se reflète aussi sous le capot. J'aime structurer des interfaces techniques au pixel près, tout en maintenant un code propre, modulaire et optimisé pour le rendu.
             </p>
             <p>
-              Mon approche est dictée par la performance brute et l'esthétique minimaliste. Passionné par les architectures modernes comme React et Vite, j'aime structurer des interfaces techniques au pixel près, tout en gardant une logique back-end rigoureuse et sécurisée pour propulser les données.
+Au-delà de mes compétences techniques, je suis animé par une curiosité insatiable pour les nouvelles technologies et les tendances du design. Je suis constamment à la recherche de nouvelles façons de repousser les limites du web, que ce soit à travers des animations complexes en CSS ou des intégrations avancées avec des bibliothèques JavaScript. Mon objectif est clair : créer des expériences digitales qui ne sont pas seulement fonctionnelles, mais qui captivent et inspirent les utilisateurs.
             </p>
           </div>
 
