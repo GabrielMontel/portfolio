@@ -7,11 +7,11 @@ export default function Space() {
       <div className="max-w-4xl space-y-8">
         <div className="flex items-center gap-3">
           <User size={14} className="text-neutral-400" />
-          <span className="tech-label text-neutral-400">Profile_Overview // Gabriel Montel</span>
+          <span className="tech-label text-neutral-400">Présentation // Gabriel Montel</span>
         </div>
         
         <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">
-          Développeur Web Full-Stack de cœur, orienté interfaces minimalistes.
+          Développeur Web Front-End de cœur.
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
@@ -30,23 +30,23 @@ export default function Space() {
             <div>
               <div className="flex items-center gap-2 text-neutral-400 mb-1">
                 <Code size={12} />
-                <span className="text-[10px] uppercase tracking-widest font-bold">Core Stack</span>
+                <span className="text-[10px] uppercase tracking-widest font-bold">Language de preference</span>
               </div>
-              <p className="text-xs font-mono text-white">React, Vite, Node.js, Tailwind CSS</p>
+              <p className="text-xs font-mono text-white">HTML, CSS, Tailwind CSS</p>
             </div>
             <div>
               <div className="flex items-center gap-2 text-neutral-400 mb-1">
                 <Layout size={12} />
-                <span className="text-[10px] uppercase tracking-widest font-bold">Philosophy</span>
+                <span className="text-[10px] uppercase tracking-widest font-bold">Philosophie</span>
               </div>
-              <p className="text-xs font-mono text-white">B&W Design, Performance, Clean Code</p>
+              <p className="text-xs font-mono text-white">Design épuré, Performance, Clean Code</p>
             </div>
             <div>
               <div className="flex items-center gap-2 text-neutral-400 mb-1">
                 <Target size={12} />
-                <span className="text-[10px] uppercase tracking-widest font-bold">Current Focus</span>
+                <span className="text-[10px] uppercase tracking-widest font-bold">Focus Actuel</span>
               </div>
-              <p className="text-xs font-mono text-white">Bases de données & API REST/GraphQL</p>
+              <p className="text-xs font-mono text-white">React.js / three.js</p>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function Space() {
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 border-t border-white/10 pt-8 mt-12">
         <div>
           <span className="tech-label text-neutral-500">01 / Parcours</span>
-          <p className="text-xs text-white uppercase font-bold mt-2">BUT MMI — Niveau 2</p>
+          <p className="text-xs text-white uppercase font-bold mt-2">BUT MMI — 2ème année</p>
           <span className="text-[10px] text-neutral-500 font-mono">IUT Université de Bourgogne</span>
         </div>
         <div>
