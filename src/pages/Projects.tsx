@@ -40,7 +40,7 @@ export default function Projects() {
       num: "01", 
       title: "Poster graphique", 
       tech: "Photoshop", 
-      desc: "Création d'affiche type poster destiné à un joueur de football professionnel.",
+      desc: "Création d'affiche type poster destiné aux réseaux sociaux, avec un style graphique et impactant.",
       img: "/poster-foot.jpg"
     },
     { 
