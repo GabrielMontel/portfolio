@@ -20,11 +20,11 @@ const ALL_PROJECTS_DATA: Record<string, {
     tech: "PHP / HTML / CSS",
     context: "STAGE entreprise — Semestre 3",
     role: "Développeur Fullstack",
-    details: "Conception d'une architecture MVC complète. Refonte complete du design du site. Integration d'une liste de stock de composant de l'entreprise.",
+    details: "Refonte complète du site vitrine de l'entreprise H-A-VALEUR, spécialisée dans l'électronique. J'ai créé une architecture MVC en PHP et implémenté un design responsive moderne avec HTML5 et CSS3. J'ai également intégré des fonctionnalités dynamiques pour la gestion du stock de l'entreprise et optimisé le SEO pour améliorer la visibilité en ligne.",
     images: ["/hav-1.png", "/hav-2.png", "/hav-3.png"],
     skillsUsed: ["PHP", "HTML", "CSS"],
-    skillsAcquired: ["Architecture MVC", "Sécurité backend", "Stratégie de design", "Gestion de base de données"],
-    outcome: "Site vitrine fonctionnelle avec design moderne et administration backend robuste.",
+    skillsAcquired: ["Architecture MVC", "Stratégie de design", "Gestion de base de données"],
+    outcome: "Site vitrine fonctionnelle avec design moderne et optimisation SEO.",
     website: "https://h-a-valeur.fr"
   },
   "site-dune-2": {
