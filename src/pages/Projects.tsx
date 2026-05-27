@@ -40,7 +40,7 @@ export default function Projects() {
       num: "01", 
       title: "Poster graphique", 
       tech: "Photoshop", 
-      desc: "Création d'affiche type poster destiné aux réseaux sociaux, avec un style graphique et impactant.",
+      desc: "Création d'affiche type poster destiné aux réseaux sociaux.",
       img: "/poster-foot.jpg"
     },
     { 
