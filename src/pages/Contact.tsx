@@ -17,7 +17,7 @@ export default function Contact() {
           <div className="flex items-center gap-3">
             <Phone size={14} /> +33 7 84 69 40 95
           </div>
-          <a hrefLang="https://www.linkedin.com/in/gabriel-montel-824b65358/" className="flex items-center gap-3 hover:text-white transition text-blue-400 cursor-pointer">
+          <a href="https://www.linkedin.com/in/gabriel-montel-824b65358/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white transition text-blue-400 cursor-pointer">
             <FileText size={14} /> Mon Linkedin
           </a>
         </div>
