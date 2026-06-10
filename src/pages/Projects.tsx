@@ -25,11 +25,11 @@ export default function Projects() {
       img: "/site-dune.png"
     },
     { 
-      slug: "secure-api", 
+      slug: "site-cineclub", 
       num: "03", 
-      title: "prochainement...", 
-      tech: "...", 
-      desc: "Nouveau système en cours de développement.",
+      title: "Site Ciné-Club du BUT MMI", 
+      tech: "react / material-ui", 
+      desc: "Creation d'un site pour participer au séance mise en place par le ciné-club du BUT MMI avec React et Material-UI.",
       img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600" 
     },
   ];
