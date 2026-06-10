@@ -30,7 +30,7 @@ export default function Projects() {
       title: "Site Ciné-Club du BUT MMI", 
       tech: "react / material-ui", 
       desc: "Creation d'un site pour participer au séance mise en place par le ciné-club.",
-      img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600" 
+      img: "/cine-club-1.png" 
     },
   ];
 

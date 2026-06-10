@@ -43,16 +43,16 @@ const ALL_PROJECTS_DATA: Record<string, {
     ],
     outcome: "Un prototype de plateforme multimédia fluide et responsive, combinant interactivité asynchrone et données géographiques, parfaitement adapté pour une campagne de marketing digital événementiel."
   },
-  "secure-api": {
-    title: "Secure Studio API",
-    tech: "TypeScript / Express / Docker",
-    context: "Projet de spécialisation réseau",
-    role: "Ingénieur DevOps Junior",
-    details: "Création d'une infrastructure d'API microservices conteneurisée. Implémentation de politiques de Rate Limiting strictes, chiffrement des données sensibles via bcrypt, et mise en place de scripts de déploiement automatique.",
-    images: ["/project-images/secure-api-1.jpg"],
-    skillsUsed: ["TypeScript", "Express", "Docker", "Sécurité", "CI/CD"],
-    skillsAcquired: ["Containerisation", "Sécurité des API", "Déploiement automatisé", "Monitoring"],
-    outcome: "API sécurisée prête pour la production, avec contrôle d'accès renforcé et documentation d'usage claire."
+  "site-cineclub": {
+    title: "Site Ciné-Club du BUT MMI",
+    tech: "react / material-ui",
+    context: "Projet étudiant — Semestre 4",
+    role: "Développeur Front-End",
+    details: "Création d'un site pour participer aux séances mises en place par le ciné-club. Intégration d'un système d'inscription en ligne, gestion des utilisateurs et des films projetés, ainsi qu'une interface utilisateur responsive et moderne. Mise en place d'un admin panel pour la gestion des séances et des votes pour les films à projeter, avec une consultation facile des horaires des séances.",
+    images: ["/cine-club-1.png", "/cine-club-2.png", "/cine-club-3.png"],
+    skillsUsed: ["React", "Material-UI", "JavaScript"],
+    skillsAcquired: ["Développement d'applications web", "", "Intégration d'API"],
+    outcome: "Site fonctionnel permettant aux étudiants de s'inscrire et de participer aux projections du ciné-club, on peut voter pour les films à projeter et consulter les horaires des séances."
   },
 
   // --- ONGLETS DESIGN GRAPHIQUE ---
