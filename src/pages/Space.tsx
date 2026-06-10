@@ -63,7 +63,7 @@ Au-delà de mes compétences techniques, je suis animé par une curiosité insat
         </div>
         <div>
           <span className="tech-label text-neutral-500">02 / Spécialisation</span>
-          <p className="text-xs text-white uppercase font-bold mt-2">Développement Web Avancé</p>
+          <p className="text-xs text-white uppercase font-bold mt-2">Développement Web & Design Interactif</p>
           <span className="text-[10px] text-neutral-500 font-mono">Front-End & Architecture Back</span>
         </div>
         <div>
@@ -73,7 +73,7 @@ Au-delà de mes compétences techniques, je suis animé par une curiosité insat
         </div>
         <div>
           <span className="tech-label text-neutral-500">04 / Status</span>
-          <p className="text-xs text-white uppercase font-bold mt-2 animate-pulse">En recherche active</p>
+          <p className="text-xs text-white uppercase font-bold mt-2 animate-pulse">En recherche active d'alternance</p>
           <span className="text-[10px] text-neutral-400 font-mono">[Open to work]</span>
         </div>
       </div>
