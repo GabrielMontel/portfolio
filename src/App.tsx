@@ -134,7 +134,7 @@ export default function App() {
           <div className="flex flex-col gap-1 border-l border-white/10 pl-4 md:pl-6">
             <span className="tech-label text-[8px] opacity-40">Disponibilité</span>
             <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-green-400 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> En recherche d'alternance 
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> En recherche de stage
             </span>
           </div>
           {/* Le bouton de téléchargement prend une place complète sur mobile pour rester accessible */}
