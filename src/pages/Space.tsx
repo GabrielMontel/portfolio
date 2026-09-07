@@ -11,7 +11,7 @@ export default function Space() {
         </div>
         
         <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">
-          Développeur Web Front-End de cœur.
+          Développeur Web Front-End.
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
@@ -34,7 +34,7 @@ Au-delà de mes compétences techniques, je suis animé par une curiosité insat
                 <Code size={12} />
                 <span className="text-[10px] uppercase tracking-widest font-bold">Language de preference</span>
               </div>
-              <p className="text-xs font-mono text-white">HTML, CSS, Tailwind CSS</p>
+              <p className="text-xs font-mono text-white">HTML, CSS, Tailwind CSS, React.js</p>
             </div>
             <div>
               <div className="flex items-center gap-2 text-neutral-400 mb-1">
@@ -68,12 +68,12 @@ Au-delà de mes compétences techniques, je suis animé par une curiosité insat
         </div>
         <div>
           <span className="tech-label text-neutral-500">03 / Disponibilité</span>
-          <p className="text-xs text-white uppercase font-bold mt-2">Rythme Alternance</p>
-          <span className="text-[10px] text-neutral-500 font-mono">Dès Septembre 2026</span>
+          <p className="text-xs text-white uppercase font-bold mt-2">Rythme de stage</p>
+          <span className="text-[10px] text-neutral-500 font-mono">Dès Janvier 2027 (8 semaines)</span>
         </div>
         <div>
           <span className="tech-label text-neutral-500">04 / Status</span>
-          <p className="text-xs text-white uppercase font-bold mt-2 animate-pulse">En recherche active d'alternance</p>
+          <p className="text-xs text-white uppercase font-bold mt-2 animate-pulse">En recherche active de stage</p>
           <span className="text-[10px] text-neutral-400 font-mono">[Open to work]</span>
         </div>
       </div>
