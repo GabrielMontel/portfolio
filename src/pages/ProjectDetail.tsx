@@ -49,7 +49,7 @@ const ALL_PROJECTS_DATA: Record<string, {
     context: "Projet étudiant — Semestre 4",
     role: "Développeur Front-End",
     details: "Création d'un site pour participer aux séances mises en place par le ciné-club. Intégration d'un système d'inscription en ligne, gestion des utilisateurs et des films projetés, ainsi qu'une interface utilisateur responsive et moderne. Mise en place d'un admin panel pour la gestion des séances et des votes pour les films à projeter, avec une consultation facile des horaires des séances.",
-    images: ["/cine-club-1.png", "/cine-club-2.png", "/cine-club-3.png"],
+    images: ["/accueil.png", "/film.png", "/vote.png", "/commentaires.png"],
     skillsUsed: ["React", "Material-UI", "JavaScript"],
     skillsAcquired: ["Développement d'applications web", "", "Intégration d'API"],
     outcome: "Site fonctionnel permettant aux étudiants de s'inscrire et de participer aux projections du ciné-club, on peut voter pour les films à projeter et consulter les horaires des séances."
