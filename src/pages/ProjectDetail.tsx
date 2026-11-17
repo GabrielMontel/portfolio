@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Shield, Image, ClipboardList, Sparkles, ExternalLink } from "lucide-react";
+import { ArrowLeft, Shield, Image, ClipboardList, Sparkles, ExternalLink, CheckCircle2, Layers } from "lucide-react";
 
 const ALL_PROJECTS_DATA: Record<string, {
   title: string;
@@ -8,6 +8,7 @@ const ALL_PROJECTS_DATA: Record<string, {
   context: string;
   role: string;
   details: string;
+  features?: string[];
   images?: string[];
   skillsUsed: string[];
   skillsAcquired: string[];
@@ -17,42 +18,74 @@ const ALL_PROJECTS_DATA: Record<string, {
   // --- ONGLETS CODE & WEB DESIGN ---
   "site-vitrine": {
     title: "Refonte site vitrine H-A-VALEUR",
-    tech: "PHP / HTML / CSS",
-    context: "STAGE entreprise — Semestre 3",
-    role: "Développeur Fullstack",
-    details: "Refonte complète du site vitrine de l'entreprise H-A-VALEUR, spécialisée dans l'électronique. J'ai créé une architecture MVC en PHP et implémenté un design responsive moderne avec HTML5 et CSS3. J'ai également intégré des fonctionnalités dynamiques pour la gestion du stock de l'entreprise et optimisé le SEO pour améliorer la visibilité en ligne.",
+    tech: "PHP (POO & MVC) / HTML5 / CSS3 / MySQL / SEO",
+    context: "Stage en entreprise — 10 semaines (BUT MMI S3)",
+    role: "Développeur Fullstack (Architecture, intégration & SEO)",
+    details: "Dans le cadre de mon stage de deuxième année de BUT MMI, j'ai pris en charge la refonte intégrale du site vitrine de l'entreprise H-A-VALEUR, spécialisée dans les équipements électroniques et composants industriels.\n\nL'enjeu majeur était de moderniser une présence web devenue obsolète afin de véhiculer une image de marque industrielle haut de gamme, d'optimiser le référencement naturel sur les moteurs de recherche et de clarifier la présentation du catalogue technique.\n\nJ'ai conçu et déployé une architecture MVC (Modèle-Vue-Contrôleur) sur-mesure en PHP natif sans framework lourd, garantissant une séparation stricte des responsabilités, une grande maintenabilité et des temps de chargement ultra-rapides. Côté interface, j'ai réalisé une intégration responsive accessible et fluide (HTML5 sémantique, CSS Grid & Flexbox), complétée par un module dynamique de consultation des stocks et un formulaire de contact sécurisé.",
+    features: [
+      "Architecture MVC modulaire en PHP natif garantissant rapidité d'exécution et maintenabilité.",
+      "Interface 100% responsive et ergonomique conçue pour le parcours d'achat B2B.",
+      "Module dynamique de consultation du catalogue et de vérification des stocks.",
+      "Formulaire de demande de devis personnalisé avec validation sécurisée (PDO / requêtes préparées).",
+      "Optimisation SEO complète (balisage Schema.org, Open Graph, Core Web Vitals)."
+    ],
     images: ["/hav-1.png", "/hav-2.png", "/hav-3.png"],
-    skillsUsed: ["PHP", "HTML", "CSS"],
-    skillsAcquired: ["Architecture MVC", "Stratégie de design", "Gestion de base de données"],
-    outcome: "Site vitrine fonctionnelle avec design moderne et optimisation SEO.",
+    skillsUsed: ["PHP (POO & MVC)", "MySQL / PDO", "HTML5 sémantique", "CSS3 / Grid & Flexbox", "Audit & Optimisation SEO", "Sécurisation formulaires"],
+    skillsAcquired: [
+      "Conception et déploiement d'une architecture MVC complète de A à Z",
+      "Modélisation et requêtage optimisé sur base relationnelle MySQL",
+      "Amélioration mesurable du score SEO et des Core Web Vitals Google",
+      "Gestion directe de la relation client et recueil du besoin métier"
+    ],
+    outcome: "Mise en production d'un site vitrine sur-mesure, rapide et sécurisé. La refonte a permis d'accroître significativement le trafic organique, de valoriser l'expertise industrielle de l'entreprise et de générer de nouveaux contacts commerciaux entrants.",
     website: "https://h-a-valeur.fr"
   },
   "site-dune-2": {
     title: "Site prototype film Dune 2",
-    tech: "HTML / CSS / JavaScript",
-    context: "Projet scolaire MMI — Semestre 3",
-    role: "Développeur Front-End",
-    details: "Conception d'un site immersif pour la campagne promotionnelle du film Dune 2. Intégration d'un flux vidéo externe (YouTube/Dailymotion), structure asymétrique complexe en CSS Grid, développement de carrousels interactifs (manuels et automatisés), intégration de l'API de cartographie Leaflet pour la géolocalisation des cinémas, et génération dynamique d'un casting interactif via des requêtes asynchrones AJAX.",
-    images: ["/site-dune.png", "/site-dune-2.png"],
-    skillsUsed: ["HTML5", "CSS3 / Grid", "JavaScript (Vanilla)", "Leaflet API", "AJAX"],
-    skillsAcquired: [
-      "Manipulation dynamique du DOM",
-      "Intégration et manipulation d'API tierces (Cartographie)",
-      "Gestion des requêtes asynchrones (Fetch / AJAX)",
-      "Conception d'interfaces interactives (Carrousels)"
+    tech: "HTML5 / CSS3 Grid / JavaScript (Vanilla) / Leaflet API / AJAX",
+    context: "Projet universitaire MMI — Développement Front & Multimédia (S3)",
+    role: "Développeur Front-End & Intégrateur multimédia",
+    details: "Conception d'une plateforme web promotionnelle immersive pour la sortie en salles du blockbuster de science-fiction « Dune : Deuxième Partie ».\n\nL'objectif de ce projet était de conjuguer une narration visuelle forte avec des exigences techniques front-end pointues, en immergeant l'utilisateur dans l'atmosphère du film sans rechargement de page.\n\nLe site repose sur une composition asymétrique sous CSS Grid, intégrant des arrière-plans vidéo plein écran et des effets sonores interactifs. Afin d'assurer une réactivité optimale et une parfaite maîtrise du code, l'ensemble des fonctionnalités interactives a été programmé en JavaScript Vanilla sans dépendance externe superflue.\n\nJ'ai notamment intégré l'API de cartographie Leaflet pour permettre aux internautes de géolocaliser les salles diffusant le film à proximité, et mis en place des requêtes asynchrones (AJAX / Fetch) pour charger dynamiquement les fiches des personnages, synopsis et contenus médias.",
+    features: [
+      "Direction artistique immersive avec intégration vidéo plein écran et design asymétrique.",
+      "Cartographie interactive Leaflet.js personnalisée avec géolocalisation des cinémas partenaires.",
+      "Carrousels et visionneuses d'images interactifs programmés sur-mesure en Vanilla JS.",
+      "Chargement asynchrone des fiches casting et médias via Fetch API / AJAX.",
+      "Système d'onglets dynamiques et micro-animations fluides cadencées en CSS3."
     ],
-    outcome: "Un prototype de plateforme multimédia fluide et responsive, combinant interactivité asynchrone et données géographiques, parfaitement adapté pour une campagne de marketing digital événementiel."
+    images: ["/site-dune.png", "/site-dune-2.png"],
+    skillsUsed: ["JavaScript ES6+ (Vanilla)", "CSS Grid & Flexbox avancé", "Leaflet.js & Géolocalisation", "Requêtes Fetch / AJAX", "Intégration Vidéo & Audio", "Responsive Web Design"],
+    skillsAcquired: [
+      "Maîtrise approfondie de la manipulation dynamique du DOM sans framework",
+      "Connexion et personnalisation poussée d'une API cartographique tierce",
+      "Gestion des flux asynchrones, des promesses JS et du parsing JSON",
+      "Optimisation du rendu graphique sur des interfaces riches en assets multimédias"
+    ],
+    outcome: "Un prototype événementiel hautement immersif et techniquement complet, démontrant la capacité à développer des interfaces créatives complexes, fluides et interactives conformes aux standards de l'industrie du divertissement."
   },
   "site-cineclub": {
     title: "Site Ciné-Club du BUT MMI",
-    tech: "react / material-ui",
-    context: "Projet étudiant — Semestre 4",
-    role: "Développeur Front-End",
-    details: "Création d'un site pour participer aux séances mises en place par le ciné-club. Intégration d'un système d'inscription en ligne, gestion des utilisateurs et des films projetés, ainsi qu'une interface utilisateur responsive et moderne. Mise en place d'un admin panel pour la gestion des séances et des votes pour les films à projeter, avec une consultation facile des horaires des séances.",
+    tech: "React.js / Material-UI (MUI) / JavaScript ES6+ / SPA",
+    context: "Projet tuteuré MMI — Application Web Communautaire (S4)",
+    role: "Développeur Front-End React & Responsable UX/UI",
+    details: "Création et déploiement d'une application web monopage (SPA) pour le Ciné-Club du département MMI de Dijon, destinée à dynamiser la vie étudiante et automatiser la gestion des projections cinématographiques.\n\nLe projet répondait à une problématique réelle : remplacer les inscriptions papier, centraliser la programmation et engager les étudiants en leur permettant de choisir démocratiquement les films projetés via un système de vote interactif.\n\nL'application a été construite sous React.js avec une architecture modulaire basée sur des composants réutilisables et un état réactif. L'interface s'appuie sur le Design System Material-UI (MUI) pour garantir une ergonomie irréprochable, une accessibilité soignée et un affichage parfaitement fluide sur mobile comme sur desktop.\n\nL'application intègre un module de vote en direct avec mise à jour immédiate des résultats, un système de réservation de places avec jauge de capacité en temps réel, un espace d'avis/commentaires, ainsi qu'un back-office complet réservé aux organisateurs pour administrer les séances.",
+    features: [
+      "Architecture Single Page Application (SPA) réactive construite avec React.js.",
+      "Système de vote participatif en temps réel permettant aux étudiants d'élire les films programmés.",
+      "Module de réservation en ligne avec confirmation immédiate et jauge de places disponible.",
+      "Fiches de films complètes intégrant bandes-annonces, synopsis et horaires de projection.",
+      "Tableau de bord d'administration pour la planification des séances et la modération.",
+      "Design System Material-UI (MUI) accessible et 100% optimisé pour smartphone."
+    ],
     images: ["/accueil.png", "/film.png", "/vote.png", "/commentaires.png"],
-    skillsUsed: ["React", "Material-UI", "JavaScript"],
-    skillsAcquired: ["Développement d'applications web", "", "Intégration d'API"],
-    outcome: "Site fonctionnel permettant aux étudiants de s'inscrire et de participer aux projections du ciné-club, on peut voter pour les films à projeter et consulter les horaires des séances."
+    skillsUsed: ["React.js (Composants & Hooks)", "Material-UI (MUI)", "JavaScript ES6+", "State Management & Props", "Architecture SPA", "Ergonomie Mobile-First"],
+    skillsAcquired: [
+      "Conception et structuration d'une application React modulaire et scalable",
+      "Personnalisation et déploiement d'un Design System UI professionnel",
+      "Gestion d'interactions complexes (votes temps réel, formulaires, modération)",
+      "Conduite de projet agile et itérations basées sur les retours d'utilisateurs réels"
+    ],
+    outcome: "Plateforme déployée et adoptée par la communauté étudiante de l'IUT. Le site a permis d'éliminer la gestion papier des inscriptions, de fluidifier l'organisation des projections et de doubler la participation étudiante grâce au vote interactif."
   },
 
   // --- ONGLETS DESIGN GRAPHIQUE ---
@@ -187,14 +220,43 @@ export default function ProjectDetail() {
             <Shield size={12} />
             <span className="tech-label text-[8px]">Documentation technique</span>
           </div>
-          <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500">// Analyse du projet & méthodologie</h3>
-          <p className="text-sm text-neutral-700 leading-relaxed font-medium">{project.details}</p>
+          <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500">// Analyse du projet & démarche</h3>
+          <div className="space-y-4">
+            {project.details.split("\n\n").map((paragraph, idx) => (
+              <p key={idx} className="text-sm text-neutral-700 leading-relaxed font-normal">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
+
+        {/* FONCTIONNALITÉS CLÉS (Si présentes) */}
+        {project.features && project.features.length > 0 && (
+          <div className="space-y-4 border-t border-black/10 pt-6">
+            <div className="flex items-center gap-2 opacity-60 text-neutral-500">
+              <Layers size={12} />
+              <span className="tech-label text-[8px]">Architecture & Fonctionnalités</span>
+            </div>
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500">// Réalisations & points clés</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {project.features.map((feat, idx) => (
+                <div key={idx} className="p-3.5 rounded-sm border border-black/10 bg-black/[0.02] flex items-start gap-2.5">
+                  <CheckCircle2 size={14} className="text-neutral-900 mt-0.5 shrink-0" />
+                  <p className="text-xs text-neutral-700 leading-relaxed font-medium">{feat}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="grid gap-6 border-t border-black/10 pt-6">
           <div className="space-y-2">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.22em] text-neutral-500">Résultat</h4>
-            <p className="text-sm text-neutral-700 leading-relaxed">{project.outcome}</p>
+            <div className="flex items-center gap-2 opacity-60 text-neutral-500">
+              <Sparkles size={12} />
+              <span className="tech-label text-[8px]">Bilan & Impact</span>
+            </div>
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500">// Résultat obtenu</h4>
+            <p className="text-sm text-neutral-700 leading-relaxed font-normal">{project.outcome}</p>
           </div>
 
           {project.website && (

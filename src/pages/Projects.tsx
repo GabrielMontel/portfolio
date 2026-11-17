@@ -7,40 +7,54 @@ export default function Projects() {
   // Onglet actif : 'web' ou 'design'
   const [activeTab, setActiveTab] = useState<"web" | "design">("web");
 
-  const webProjects = [
+  interface ProjectItem {
+    slug: string;
+    num: string;
+    title: string;
+    tech: string;
+    desc: string;
+    img: string;
+    badge?: string;
+  }
+
+  const webProjects: ProjectItem[] = [
     { 
-      slug: "site-vitrine", // Corrigé (sans espace pour l'URL)
+      slug: "site-vitrine",
       num: "01", 
       title: "Refonte site vitrine entreprise H-A-VALEUR", 
-      tech: "PHP / HTML / CSS", 
-      desc: "Projet de refonte complète du site vitrine de l'entreprise H-A-VALEUR.",
-      img: "/hav-1.png" // Place ton image dans le dossier public
+      tech: "PHP / MVC / MySQL", 
+      badge: "Stage entreprise",
+      desc: "Refonte intégrale de la plateforme d'entreprise : architecture MVC en PHP natif, catalogue dynamique, gestion des stocks et optimisation SEO.",
+      img: "/hav-1.png"
     },
     { 
-      slug: "site-dune-2", // Corrigé pour correspondre à ton composant de détails
+      slug: "site-dune-2",
       num: "02", 
       title: "Site prototype film Dune 2", 
-      tech: "HTML / CSS / JavaScript", 
-      desc: "Création d'un site prototype pour le film Dune 2 avec API Leaflet et AJAX.",
+      tech: "JS Vanilla / Leaflet / AJAX", 
+      badge: "Projet universitaire",
+      desc: "Plateforme promotionnelle immersive avec cartographie interactive Leaflet (séances & cinémas), intégration vidéo plein écran et carrousels sur-mesure.",
       img: "/site-dune.png"
     },
     { 
       slug: "site-cineclub", 
       num: "03", 
       title: "Site Ciné-Club du BUT MMI", 
-      tech: "react / material-ui", 
-      desc: "Creation d'un site pour participer au séance mise en place par le ciné-club.",
+      tech: "React / Material-UI / SPA", 
+      badge: "Projet tuteuré",
+      desc: "Application web communautaire pour les étudiants : système de vote interactif en temps réel, réservation en ligne des séances et back-office d'administration.",
       img: "/cine-club-1.png" 
     },
   ];
 
-  const graphicProjects = [
+  const graphicProjects: ProjectItem[] = [
     { 
       slug: "poster", 
       num: "01", 
       title: "Poster graphique", 
       tech: "Photoshop", 
-      desc: "Création d'affiche type poster destiné aux réseaux sociaux.",
+      badge: "Direction artistique",
+      desc: "Création d'affiches graphiques haute définition destinées à la communication digitale et aux réseaux sociaux sportifs.",
       img: "/poster-foot.jpg"
     },
     { 
@@ -100,20 +114,27 @@ export default function Projects() {
             >
               {/* 1. ZONE DE TEXTE (HAUT) */}
               <div className="p-6 md:p-8 space-y-4">
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center gap-2">
                   <span className="text-[9px] font-bold text-neutral-400 tracking-widest">
                     // {activeTab === "web" ? "SYS.EXEC" : "ART.DIR"} // {project.num}
                   </span>
-                  <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-neutral-700 bg-black/5 border border-black/10 px-2 py-0.5 rounded-sm">
-                    {project.tech}
-                  </span>
+                  <div className="flex items-center gap-1.5 flex-wrap justify-end">
+                    {project.badge && (
+                      <span className="text-[8px] font-mono uppercase tracking-wider text-neutral-600 bg-neutral-100 border border-neutral-200/80 px-1.5 py-0.5 rounded-sm">
+                        {project.badge}
+                      </span>
+                    )}
+                    <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-neutral-700 bg-black/5 border border-black/10 px-2 py-0.5 rounded-sm">
+                      {project.tech}
+                    </span>
+                  </div>
                 </div>
                 
                 <div className="space-y-2">
                   <h3 className="text-xl font-black uppercase tracking-tighter text-neutral-950 group-hover:text-blue-600 transition duration-300 min-h-[56px] line-clamp-2">
                     {project.title}
                   </h3>
-                  <p className="text-xs text-neutral-600 uppercase tracking-wide leading-relaxed font-medium line-clamp-2 h-8">
+                  <p className="text-xs text-neutral-600 leading-relaxed font-normal line-clamp-3 min-h-[54px]">
                     {project.desc}
                   </p>
                 </div>
