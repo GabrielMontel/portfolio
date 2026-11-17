@@ -55,7 +55,7 @@ export default function Projects() {
       tech: "Photoshop", 
       badge: "Direction artistique",
       desc: "Création d'affiches graphiques haute définition destinées à la communication digitale et aux réseaux sociaux sportifs.",
-      img: "/poster-foot.jpg"
+      img: "/affiche_1.png"
     },
     { 
       slug: "motion-vfx", 
