@@ -14,7 +14,12 @@ function Home() {
   return (
     <>
       {/* VISUEL PRINCIPAL - ESPACE & TERRE */}
-      <section className="md:col-span-8 md:row-span-4 panel-border p-6 md:p-12 relative overflow-hidden group min-h-[40vh] md:min-h-0 flex flex-col justify-end bg-white/70">
+      <motion.section 
+        initial={{ opacity: 0, y: 28, scale: 0.96 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ type: "spring", stiffness: 220, damping: 22, mass: 0.85, delay: 0.05 }}
+        className="md:col-span-8 md:row-span-4 panel-border p-6 md:p-12 relative overflow-hidden group min-h-[40vh] md:min-h-0 flex flex-col justify-end bg-white/70"
+      >
         
         {/* REPRODUCTION VIDÉO DE LA TERRE */}
         <video 
@@ -34,43 +39,69 @@ function Home() {
         {/* TEXTE UNIQUE ET NAVIGATION */}
         <div className="relative z-20">
           <motion.h2 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 22, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ type: "spring", stiffness: 240, damping: 20, delay: 0.22 }}
             className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-6 text-neutral-950"
           >
             Gabriel <br /> Montel.
           </motion.h2>
-          <Link to="/projets" className="inline-flex items-center gap-4 tech-label text-neutral-900 hover:gap-8 transition-all cursor-pointer">
-            VOIR MES PROJETS <MoveRight size={14} />
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, x: -16 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.55, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <Link to="/projets" className="inline-flex items-center gap-4 tech-label text-neutral-900 hover:gap-8 transition-all cursor-pointer">
+              VOIR MES PROJETS <MoveRight size={14} />
+            </Link>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* SIDEBAR TECHNIQUE */}
-      <aside className="md:col-span-4 md:row-span-4 panel-border p-6 md:p-10 flex flex-col justify-between gap-6 md:gap-8 bg-white/70">
+      <motion.aside 
+        initial={{ opacity: 0, y: 28, scale: 0.96 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ type: "spring", stiffness: 220, damping: 22, mass: 0.85, delay: 0.16 }}
+        className="md:col-span-4 md:row-span-4 panel-border p-6 md:p-10 flex flex-col justify-between gap-6 md:gap-8 bg-white/70"
+      >
         <div className="space-y-6 md:space-y-8">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
+          >
             <span className="tech-label text-neutral-400">Description</span>
             <p className="text-xs md:text-sm mt-3 text-neutral-600 leading-relaxed uppercase tracking-wider font-medium">
               Etudiant en deuxieme année BUT Métiers du Multimedia et de l'Internet 
             </p>
-          </div>
+          </motion.div>
           <div className="h-px bg-black/10 w-full" />
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.36, ease: [0.16, 1, 0.3, 1] }}
+          >
             <span className="tech-label text-neutral-400">Competences Principales</span>
             <ul className="text-[9px] md:text-[10px] mt-4 space-y-2 uppercase font-bold tracking-widest text-neutral-600">
               <li>- Developpement web</li>
               <li>- Design Graphique</li>
               <li>- Communication</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
         
-        <Link to="/contact" className="p-4 md:p-6 bg-black/[0.03] border border-black/10 rounded flex items-center justify-between group cursor-pointer hover:bg-black/5 hover:border-black/20 transition">
-          <span className="tech-label text-neutral-900">Me Contacter</span>
-          <MousePointer2 size={16} className="group-hover:rotate-12 transition text-neutral-900" />
-        </Link>
-      </aside>
+        <motion.div
+          initial={{ opacity: 0, y: 16, scale: 0.94 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ type: "spring", stiffness: 280, damping: 18, delay: 0.44 }}
+        >
+          <Link to="/contact" className="p-4 md:p-6 bg-black/[0.03] border border-black/10 rounded flex items-center justify-between group cursor-pointer hover:bg-black/5 hover:border-black/20 transition">
+            <span className="tech-label text-neutral-900">Me Contacter</span>
+            <MousePointer2 size={16} className="group-hover:rotate-12 transition text-neutral-900" />
+          </Link>
+        </motion.div>
+      </motion.aside>
     </>
   );
 }
@@ -83,7 +114,12 @@ export default function App() {
       <main className="min-h-screen w-full p-4 md:p-6 flex flex-col md:grid md:grid-cols-12 md:grid-rows-6 gap-4 box-border bg-[#f5f5f7]">
         
         {/* HEADER & NAV */}
-        <header className="panel-border p-4 md:p-6 flex flex-col sm:flex-row justify-between items-center gap-4 h-auto md:h-20 md:col-span-12 bg-white/70">
+        <motion.header 
+          initial={{ opacity: 0, y: -20, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ type: "spring", stiffness: 240, damping: 22 }}
+          className="panel-border p-4 md:p-6 flex flex-col sm:flex-row justify-between items-center gap-4 h-auto md:h-20 md:col-span-12 bg-white/70"
+        >
           <Link to="/" className="flex items-center gap-4 group">
             <div className="w-8 h-8 bg-neutral-950 rounded-full flex items-center justify-center group-hover:rotate-12 transition">
               <Zap size={16} className="text-white fill-white" />
@@ -109,7 +145,7 @@ export default function App() {
               <span className="opacity-60">↓</span>
             </a>
           </div>
-        </header>
+        </motion.header>
 
         {/* ZONE DE CONTENU DYNAMIQUE */}
         <Routes>
@@ -122,7 +158,12 @@ export default function App() {
         </Routes>
 
         {/* FOOTER METRICS RESPONSIVE */}
-        <footer className="panel-border p-4 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 items-center h-auto md:h-20 md:col-span-12 bg-white/70">
+        <motion.footer 
+          initial={{ opacity: 0, y: 20, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ type: "spring", stiffness: 240, damping: 22, delay: 0.2 }}
+          className="panel-border p-4 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 items-center h-auto md:h-20 md:col-span-12 bg-white/70"
+        >
           <div className="flex flex-col gap-1 border-l border-black/10 pl-4 md:pl-6">
             <span className="tech-label text-[8px] opacity-70">Environnement</span>
             <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-blue-600">IUT Dijon</span>
@@ -148,7 +189,7 @@ export default function App() {
               <span>↓</span>
             </a>
           </div>
-        </footer>
+        </motion.footer>
 
       </main>
     </Router>
