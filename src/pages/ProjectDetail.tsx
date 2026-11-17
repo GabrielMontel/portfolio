@@ -103,48 +103,48 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className="md:col-span-12 md:row-span-4 panel-border p-12 text-center flex flex-col justify-center items-center gap-4">
-        <p className="tech-label text-red-400">Error 404 // Stack Trace Empty</p>
-        <Link to="/projets" className="text-xs underline uppercase font-bold tracking-widest text-neutral-400 hover:text-white">Retour à l'inventaire</Link>
+      <div className="md:col-span-12 md:row-span-4 panel-border p-12 text-center flex flex-col justify-center items-center gap-4 bg-white/70">
+        <p className="tech-label text-red-500">Error 404 // Stack Trace Empty</p>
+        <Link to="/projets" className="text-xs underline uppercase font-bold tracking-widest text-neutral-500 hover:text-neutral-950">Retour à l'inventaire</Link>
       </div>
     );
   }
 
   return (
     <div className="md:col-span-12 md:row-span-4 grid grid-cols-1 md:grid-cols-12 gap-4 h-full overflow-y-auto pr-2 custom-scrollbar">
-      <div className="md:col-span-4 panel-border p-8 flex flex-col justify-between gap-12 bg-white/[0.01]">
+      <div className="md:col-span-4 panel-border p-8 flex flex-col justify-between gap-12 bg-white/70">
         <div className="space-y-6">
-          <Link to="/projets" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neutral-400 hover:text-white transition mb-4">
+          <Link to="/projets" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neutral-500 hover:text-neutral-950 transition mb-4">
             <ArrowLeft size={12} /> Retour
           </Link>
-          <span className="tech-label block text-white/30">{project.context}</span>
-          <h2 className="text-3xl font-black uppercase tracking-tighter text-white">{project.title}</h2>
-          <span className="inline-block text-[10px] font-mono text-neutral-400 bg-white/5 border border-white/5 px-2 py-1 rounded-sm">
+          <span className="tech-label block text-neutral-400">{project.context}</span>
+          <h2 className="text-3xl font-black uppercase tracking-tighter text-neutral-950">{project.title}</h2>
+          <span className="inline-block text-[10px] font-mono text-neutral-700 bg-black/5 border border-black/10 px-2 py-1 rounded-sm">
             {project.tech}
           </span>
         </div>
 
-        <div className="space-y-6 border-t border-white/10 pt-6">
+        <div className="space-y-6 border-t border-black/10 pt-6">
           <div>
-            <span className="tech-label block">Rôle assigné</span>
-            <p className="text-xs uppercase text-white font-bold tracking-wide">{project.role}</p>
+            <span className="tech-label block text-neutral-500">Rôle assigné</span>
+            <p className="text-xs uppercase text-neutral-900 font-bold tracking-wide">{project.role}</p>
           </div>
 
           <div>
-            <span className="tech-label block">Compétences utilisées</span>
-            <ul className="grid grid-cols-2 gap-2 mt-3 text-[10px] uppercase tracking-[0.12em] text-neutral-400">
+            <span className="tech-label block text-neutral-500">Compétences utilisées</span>
+            <ul className="grid grid-cols-2 gap-2 mt-3 text-[10px] uppercase tracking-[0.12em] text-neutral-700">
               {project.skillsUsed.map((skill) => (
-                <li key={skill} className="bg-white/5 border border-white/5 px-2 py-1 rounded-sm">{skill}</li>
+                <li key={skill} className="bg-black/5 border border-black/10 px-2 py-1 rounded-sm">{skill}</li>
               ))}
             </ul>
           </div>
 
           <div>
-            <span className="tech-label block">Compétences acquises</span>
-            <ul className="space-y-2 mt-3 text-xs text-neutral-300">
+            <span className="tech-label block text-neutral-500">Compétences acquises</span>
+            <ul className="space-y-2 mt-3 text-xs text-neutral-700">
               {project.skillsAcquired.map((skill) => (
                 <li key={skill} className="flex items-center gap-2">
-                  <Sparkles size={14} className="opacity-40" />
+                  <Sparkles size={14} className="opacity-50 text-neutral-500" />
                   <span>{skill}</span>
                 </li>
               ))}
@@ -153,9 +153,9 @@ export default function ProjectDetail() {
         </div>
       </div>
 
-      <div className="md:col-span-8 panel-border p-8 md:p-12 flex flex-col gap-10 bg-white/[0.01]">
+      <div className="md:col-span-8 panel-border p-8 md:p-12 flex flex-col gap-10 bg-white/70">
         <div className="space-y-6">
-          <div className="flex items-center gap-2 opacity-40">
+          <div className="flex items-center gap-2 opacity-60 text-neutral-500">
             <Image size={12} />
             <span className="tech-label text-[8px]">Visuels du projet</span>
           </div>
@@ -164,7 +164,7 @@ export default function ProjectDetail() {
               project.images.map((imageSrc) => (
                 <div
                   key={imageSrc}
-                  className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-sm cursor-pointer"
+                  className="overflow-hidden rounded-3xl border border-black/10 bg-black/[0.02] shadow-sm cursor-pointer"
                   onClick={() => openImage(imageSrc)}
                 >
                   <img
@@ -175,26 +175,26 @@ export default function ProjectDetail() {
                 </div>
               ))
             ) : (
-              <div className="col-span-full rounded-3xl border border-dashed border-white/10 bg-white/5 p-8 text-center text-sm text-neutral-400">
-                Aucune image renseignée pour ce projet. Ajoute des captures d'écran ou mockups dans <code className="text-xs text-white/80">/public/project-images/</code>.
+              <div className="col-span-full rounded-3xl border border-dashed border-black/10 bg-black/[0.02] p-8 text-center text-sm text-neutral-500">
+                Aucune image renseignée pour ce projet. Ajoute des captures d'écran ou mockups dans <code className="text-xs text-neutral-800">/public/project-images/</code>.
               </div>
             )}
           </div>
         </div>
 
         <div className="space-y-6">
-          <div className="flex items-center gap-2 opacity-40">
+          <div className="flex items-center gap-2 opacity-60 text-neutral-500">
             <Shield size={12} />
             <span className="tech-label text-[8px]">Documentation technique</span>
           </div>
           <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500">// Analyse du projet & méthodologie</h3>
-          <p className="text-sm text-neutral-300 leading-relaxed font-medium">{project.details}</p>
+          <p className="text-sm text-neutral-700 leading-relaxed font-medium">{project.details}</p>
         </div>
 
-        <div className="grid gap-6 border-t border-white/10 pt-6">
+        <div className="grid gap-6 border-t border-black/10 pt-6">
           <div className="space-y-2">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.22em] text-neutral-500">Résultat</h4>
-            <p className="text-sm text-neutral-300 leading-relaxed">{project.outcome}</p>
+            <p className="text-sm text-neutral-700 leading-relaxed">{project.outcome}</p>
           </div>
 
           {project.website && (
@@ -202,14 +202,14 @@ export default function ProjectDetail() {
               href={project.website}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 w-full bg-white text-black p-4 text-[10px] font-black uppercase tracking-[0.2em] rounded-sm hover:bg-neutral-200 transition"
+              className="inline-flex items-center justify-center gap-2 w-full bg-neutral-950 text-white p-4 text-[10px] font-black uppercase tracking-[0.2em] rounded-sm hover:bg-neutral-800 transition"
             >
               <ExternalLink size={14} /> Voir le site vitrine
             </a>
           )}
           <Link
             to="/projets"
-            className="inline-flex items-center justify-center gap-2 w-full bg-white text-black p-4 text-[10px] font-black uppercase tracking-[0.2em] rounded-sm hover:bg-neutral-200 transition"
+            className="inline-flex items-center justify-center gap-2 w-full bg-neutral-950 text-white p-4 text-[10px] font-black uppercase tracking-[0.2em] rounded-sm hover:bg-neutral-800 transition"
           >
             <ClipboardList size={14} /> Retour aux projets
           </Link>

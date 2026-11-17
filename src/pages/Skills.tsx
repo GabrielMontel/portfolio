@@ -28,34 +28,34 @@ export default function Skills() {
   return (
     <div className="md:col-span-12 md:row-span-4 grid grid-cols-1 md:grid-cols-2 gap-4 h-full overflow-y-auto pr-2 custom-scrollbar pb-4">
       {categories.map((cat, idx) => (
-        <div key={idx} className="panel-border p-8 flex flex-col justify-between group hover:border-white/20 transition-colors bg-white/[0.01]">
+        <div key={idx} className="panel-border p-8 flex flex-col justify-between group hover:border-black/20 transition-colors bg-white/70">
           <div>
             <div className="flex items-center gap-3 mb-6">
               {cat.icon}
-              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400 group-hover:text-blue-400 transition-colors">{cat.name}</h3>
+              <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-600 group-hover:text-blue-600 transition-colors">{cat.name}</h3>
             </div>
             
             <div className="space-y-6">
               {cat.skills.map((skill, i) => (
                 <div key={i} className="space-y-2">
                   <div className="flex justify-between text-xs font-bold uppercase tracking-widest">
-                    <span className="text-white">{skill.n}</span>
+                    <span className="text-neutral-900">{skill.n}</span>
                     <span className="text-neutral-500 font-mono">{skill.p}%</span>
                   </div>
                   {/* Jauge d'instrument */}
-                  <div className="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div className="h-1 w-full bg-black/10 rounded-full overflow-hidden">
                     <motion.div 
                       initial={{ width: 0 }}
                       animate={{ width: `${skill.p}%` }}
                       transition={{ duration: 1, ease: "easeOut" }}
-                      className="h-full bg-white group-hover:bg-blue-400 transition-colors"
+                      className="h-full bg-neutral-900 group-hover:bg-blue-600 transition-colors"
                     />
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <span className="text-[9px] font-mono text-neutral-600 mt-6">// Auto-évaluation basée sur les compétences MMI</span>
+          <span className="text-[9px] font-mono text-neutral-400 mt-6">// Auto-évaluation basée sur les compétences MMI</span>
         </div>
       ))}
     </div>

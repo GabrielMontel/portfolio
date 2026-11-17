@@ -67,11 +67,11 @@ export default function Projects() {
     <div className="md:col-span-12 md:row-span-4 flex flex-col gap-6 h-full overflow-hidden">
       
       {/* SÉLECTEUR D'ONGLETS TECHNIQUE */}
-      <div className="flex gap-4 p-2 bg-white/5 border border-white/10 rounded-sm w-fit self-center md:self-start">
+      <div className="flex gap-4 p-2 bg-black/[0.04] border border-black/10 rounded-sm w-fit self-center md:self-start">
         <button
           onClick={() => setActiveTab("web")}
           className={`flex items-center gap-3 px-6 py-2 text-[10px] font-black uppercase tracking-[0.2em] transition-all cursor-pointer rounded-sm ${
-            activeTab === "web" ? "bg-white text-black" : "text-neutral-400 hover:text-white"
+            activeTab === "web" ? "bg-neutral-950 text-white" : "text-neutral-500 hover:text-neutral-900"
           }`}
         >
           <Code2 size={12} /> Code & Web Design
@@ -79,7 +79,7 @@ export default function Projects() {
         <button
           onClick={() => setActiveTab("design")}
           className={`flex items-center gap-3 px-6 py-2 text-[10px] font-black uppercase tracking-[0.2em] transition-all cursor-pointer rounded-sm ${
-            activeTab === "design" ? "bg-white text-black" : "text-neutral-400 hover:text-white"
+            activeTab === "design" ? "bg-neutral-950 text-white" : "text-neutral-500 hover:text-neutral-900"
           }`}
         >
           <Palette size={12} /> Design Graphique
@@ -96,24 +96,24 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.4, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="panel-border flex flex-col justify-between group hover:border-white/20 bg-white/[0.01] overflow-hidden"
+              className="panel-border flex flex-col justify-between group hover:border-black/20 bg-white/70 overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.02)]"
             >
               {/* 1. ZONE DE TEXTE (HAUT) */}
               <div className="p-6 md:p-8 space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-[9px] font-bold text-neutral-500 tracking-widest">
+                  <span className="text-[9px] font-bold text-neutral-400 tracking-widest">
                     // {activeTab === "web" ? "SYS.EXEC" : "ART.DIR"} // {project.num}
                   </span>
-                  <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-neutral-400 bg-white/5 border border-white/10 px-2 py-0.5 rounded-sm">
+                  <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-neutral-700 bg-black/5 border border-black/10 px-2 py-0.5 rounded-sm">
                     {project.tech}
                   </span>
                 </div>
                 
                 <div className="space-y-2">
-                  <h3 className="text-xl font-black uppercase tracking-tighter text-white group-hover:text-blue-400 transition duration-300 min-h-[56px] line-clamp-2">
+                  <h3 className="text-xl font-black uppercase tracking-tighter text-neutral-950 group-hover:text-blue-600 transition duration-300 min-h-[56px] line-clamp-2">
                     {project.title}
                   </h3>
-                  <p className="text-xs text-neutral-400 uppercase tracking-wide leading-relaxed font-medium line-clamp-2 h-8">
+                  <p className="text-xs text-neutral-600 uppercase tracking-wide leading-relaxed font-medium line-clamp-2 h-8">
                     {project.desc}
                   </p>
                 </div>
@@ -121,17 +121,17 @@ export default function Projects() {
 
               {/* 2. ENCADRÉ VISUEL DE PRÉSENTATION (MILIEU) */}
               <div className="px-6 md:px-8 pointer-events-none">
-                <div className="w-full aspect-[16/10] overflow-hidden panel-border bg-black/40 relative">
+                <div className="w-full aspect-[16/10] overflow-hidden panel-border bg-neutral-100 relative">
                   <img 
                     src={project.img} 
                     alt={project.title}
-                    className="w-full h-full object-cover grayscale brightness-[0.4] group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-[1.03] transition-all duration-500 ease-out"
+                    className="w-full h-full object-cover grayscale-[35%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-500 ease-out"
                     onError={(e) => {
                       // Si l'image n'est pas trouvée, met un fond neutre stylisé
                       e.currentTarget.src = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600";
                     }}
                   />
-                  <div className="absolute bottom-2 right-2 text-[8px] font-mono text-white/20 tracking-widest uppercase">
+                  <div className="absolute bottom-2 right-2 text-[8px] font-mono text-neutral-400 tracking-widest uppercase">
                     preview_sys
                   </div>
                 </div>
@@ -141,7 +141,7 @@ export default function Projects() {
               <div className="p-6 md:p-8 pt-4">
                 <Link 
                   to={`/projets/${project.slug}`}
-                  className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-neutral-500 group-hover:text-white transition-colors cursor-pointer w-fit"
+                  className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-neutral-500 group-hover:text-neutral-950 transition-colors cursor-pointer w-fit"
                 >
                   {activeTab === "web" ? (
                     <>Détails techniques <ExternalLink size={12} /></>

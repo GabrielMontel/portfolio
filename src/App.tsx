@@ -14,7 +14,7 @@ function Home() {
   return (
     <>
       {/* VISUEL PRINCIPAL - ESPACE & TERRE */}
-      <section className="md:col-span-8 md:row-span-4 panel-border p-6 md:p-12 relative overflow-hidden group min-h-[40vh] md:min-h-0 flex flex-col justify-end">
+      <section className="md:col-span-8 md:row-span-4 panel-border p-6 md:p-12 relative overflow-hidden group min-h-[40vh] md:min-h-0 flex flex-col justify-end bg-white/70">
         
         {/* REPRODUCTION VIDÉO DE LA TERRE */}
         <video 
@@ -22,43 +22,43 @@ function Home() {
           loop 
           muted 
           playsInline 
-          className="absolute inset-0 w-full h-full object-cover grayscale brightness-[0.3] group-hover:scale-105 transition-transform duration-[3s]"
+          className="absolute inset-0 w-full h-full object-cover grayscale brightness-[0.8] opacity-35 group-hover:opacity-50 group-hover:scale-105 transition-all duration-[3s]"
         >
           <source src="/earth.mp4" type="video/mp4" />
           <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=2070" alt="Espace" />
         </video>
 
         {/* GRADIENT PLUS DISCRET POUR LAISSER APPARAÎTRE LA TERRE */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#f5f5f7]/95 via-[#f5f5f7]/40 to-transparent z-10 pointer-events-none" />
         
         {/* TEXTE UNIQUE ET NAVIGATION */}
         <div className="relative z-20">
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-6 text-white"
+            className="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] mb-6 text-neutral-950"
           >
             Gabriel <br /> Montel.
           </motion.h2>
-          <Link to="/projets" className="inline-flex items-center gap-4 tech-label text-white hover:gap-8 transition-all cursor-pointer">
+          <Link to="/projets" className="inline-flex items-center gap-4 tech-label text-neutral-900 hover:gap-8 transition-all cursor-pointer">
             VOIR MES PROJETS <MoveRight size={14} />
           </Link>
         </div>
       </section>
 
       {/* SIDEBAR TECHNIQUE */}
-      <aside className="md:col-span-4 md:row-span-4 panel-border p-6 md:p-10 flex flex-col justify-between gap-6 md:gap-8">
+      <aside className="md:col-span-4 md:row-span-4 panel-border p-6 md:p-10 flex flex-col justify-between gap-6 md:gap-8 bg-white/70">
         <div className="space-y-6 md:space-y-8">
           <div>
-            <span className="tech-label text-white/40">Description</span>
-            <p className="text-xs md:text-sm mt-3 text-neutral-400 leading-relaxed uppercase tracking-wider font-medium">
+            <span className="tech-label text-neutral-400">Description</span>
+            <p className="text-xs md:text-sm mt-3 text-neutral-600 leading-relaxed uppercase tracking-wider font-medium">
               Etudiant en deuxieme année BUT Métiers du Multimedia et de l'Internet 
             </p>
           </div>
-          <div className="h-px bg-white/10 w-full" />
+          <div className="h-px bg-black/10 w-full" />
           <div>
-            <span className="tech-label">Competences Principales</span>
-            <ul className="text-[9px] md:text-[10px] mt-4 space-y-2 uppercase font-bold tracking-widest text-neutral-500">
+            <span className="tech-label text-neutral-400">Competences Principales</span>
+            <ul className="text-[9px] md:text-[10px] mt-4 space-y-2 uppercase font-bold tracking-widest text-neutral-600">
               <li>- Developpement web</li>
               <li>- Design Graphique</li>
               <li>- Communication</li>
@@ -66,9 +66,9 @@ function Home() {
           </div>
         </div>
         
-        <Link to="/contact" className="p-4 md:p-6 bg-white/5 border border-white/10 rounded flex items-center justify-between group cursor-pointer hover:bg-white/10 transition">
-          <span className="tech-label text-white">Me Contacter</span>
-          <MousePointer2 size={16} className="group-hover:rotate-12 transition text-white" />
+        <Link to="/contact" className="p-4 md:p-6 bg-black/[0.03] border border-black/10 rounded flex items-center justify-between group cursor-pointer hover:bg-black/5 hover:border-black/20 transition">
+          <span className="tech-label text-neutral-900">Me Contacter</span>
+          <MousePointer2 size={16} className="group-hover:rotate-12 transition text-neutral-900" />
         </Link>
       </aside>
     </>
@@ -80,30 +80,30 @@ export default function App() {
   return (
     <Router>
       {/* Passage en flex-direction colonne sur mobile et grille uniquement sur écran d'ordinateur (md+) */}
-      <main className="min-h-screen w-full p-4 md:p-6 flex flex-col md:grid md:grid-cols-12 md:grid-rows-6 gap-4 box-border bg-[#050505]">
+      <main className="min-h-screen w-full p-4 md:p-6 flex flex-col md:grid md:grid-cols-12 md:grid-rows-6 gap-4 box-border bg-[#f5f5f7]">
         
         {/* HEADER & NAV */}
-        <header className="panel-border p-4 md:p-6 flex flex-col sm:flex-row justify-between items-center gap-4 h-auto md:h-20 md:col-span-12">
+        <header className="panel-border p-4 md:p-6 flex flex-col sm:flex-row justify-between items-center gap-4 h-auto md:h-20 md:col-span-12 bg-white/70">
           <Link to="/" className="flex items-center gap-4 group">
-            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center group-hover:rotate-12 transition">
-              <Zap size={16} className="text-black fill-black" />
+            <div className="w-8 h-8 bg-neutral-950 rounded-full flex items-center justify-center group-hover:rotate-12 transition">
+              <Zap size={16} className="text-white fill-white" />
             </div>
-            <h1 className="text-base font-black uppercase tracking-tighter text-white">Gabriel Montel / Portfolio</h1>
+            <h1 className="text-base font-black uppercase tracking-tighter text-neutral-950">Gabriel Montel / Portfolio</h1>
           </Link>
           
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-10">
-            <nav className="flex gap-4 md:gap-8 tech-label text-xs md:text-sm text-neutral-400">
-              <Link to="/projets" className="hover:text-white transition">Projects</Link>
-              <Link to="/competences" className="hover:text-white transition">Skills</Link>
-              <Link to="/space" className="hover:text-white transition">About</Link>
-              <Link to="/contact" className="hover:text-white transition">Contact</Link>
+            <nav className="flex gap-4 md:gap-8 tech-label text-xs md:text-sm text-neutral-500">
+              <Link to="/projets" className="hover:text-neutral-950 transition">Projects</Link>
+              <Link to="/competences" className="hover:text-neutral-950 transition">Skills</Link>
+              <Link to="/space" className="hover:text-neutral-950 transition">About</Link>
+              <Link to="/contact" className="hover:text-neutral-950 transition">Contact</Link>
             </nav>
 
             {/* BOUTON CV UNIQUE EN HAUT (Masqué sur tout petit écran, visible via le footer) */}
             <a 
               href="./CV.pdf"
               download
-              className="hidden sm:flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] bg-white text-black px-4 py-2 rounded-sm border border-white hover:bg-transparent hover:text-white transition-all duration-300 cursor-pointer"
+              className="hidden sm:flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] bg-neutral-950 text-white px-4 py-2 rounded-sm border border-neutral-950 hover:bg-transparent hover:text-neutral-950 transition-all duration-300 cursor-pointer"
             >
               <span>CV.PDF</span>
               <span className="opacity-60">↓</span>
@@ -122,19 +122,19 @@ export default function App() {
         </Routes>
 
         {/* FOOTER METRICS RESPONSIVE */}
-        <footer className="panel-border p-4 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 items-center h-auto md:h-20 md:col-span-12">
-          <div className="flex flex-col gap-1 border-l border-white/10 pl-4 md:pl-6">
-            <span className="tech-label text-[8px] opacity-40">Environnement</span>
-            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-blue-400">IUT Dijon</span>
+        <footer className="panel-border p-4 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 items-center h-auto md:h-20 md:col-span-12 bg-white/70">
+          <div className="flex flex-col gap-1 border-l border-black/10 pl-4 md:pl-6">
+            <span className="tech-label text-[8px] opacity-70">Environnement</span>
+            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-blue-600">IUT Dijon</span>
           </div>
-          <div className="flex flex-col gap-1 border-l border-white/10 pl-4 md:pl-6">
-            <span className="tech-label text-[8px] opacity-40">Localisation</span>
-            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-white">Dijon, FR</span>
+          <div className="flex flex-col gap-1 border-l border-black/10 pl-4 md:pl-6">
+            <span className="tech-label text-[8px] opacity-70">Localisation</span>
+            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-neutral-950">Dijon, FR</span>
           </div>
-          <div className="flex flex-col gap-1 border-l border-white/10 pl-4 md:pl-6">
-            <span className="tech-label text-[8px] opacity-40">Disponibilité</span>
-            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-green-400 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> En stage à partir de janvier 2027
+          <div className="flex flex-col gap-1 border-l border-black/10 pl-4 md:pl-6">
+            <span className="tech-label text-[8px] opacity-70">Disponibilité</span>
+            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-emerald-600 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> En stage à partir de janvier 2027
             </span>
           </div>
           {/* Le bouton de téléchargement prend une place complète sur mobile pour rester accessible */}
@@ -142,7 +142,7 @@ export default function App() {
             <a 
               href="./CV.pdf"
               download
-              className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] bg-white text-black px-4 py-2.5 rounded-sm border border-white hover:bg-transparent hover:text-white transition-all duration-300 cursor-pointer w-full md:w-auto"
+              className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-[0.2em] bg-neutral-950 text-white px-4 py-2.5 rounded-sm border border-neutral-950 hover:bg-transparent hover:text-neutral-950 transition-all duration-300 cursor-pointer w-full md:w-auto"
             >
               <span>TELECHARGER MON CV</span>
               <span>↓</span>
