@@ -86,7 +86,7 @@ function Home() {
             <ul className="text-[9px] md:text-[10px] mt-4 space-y-2 uppercase font-bold tracking-widest text-neutral-600">
               <li>- Developpement web</li>
               <li>- Design Graphique</li>
-              <li>- Communication</li>
+              <li>- Communication sur les réseaux sociaux</li>
             </ul>
           </motion.div>
         </div>
